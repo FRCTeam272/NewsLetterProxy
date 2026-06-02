@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(find /home/jakeg/source/repo/CrusaderNewsletter/public -type f 2>/dev/null; find /tmp -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.svg\" 2>/dev/null | head -10)",
+      "Read(//tmp/**)",
+      "Bash(npm install *)",
+      "Bash(rm /home/jakeg/source/repo/CrusaderNewsletter/src/hooks/usePageBreaks.js)"
+    ],
+    "additionalDirectories": [
+      "/home/jakeg/source/repo/CrusaderNewsletter/src/hooks"
+    ]
+  }
+}

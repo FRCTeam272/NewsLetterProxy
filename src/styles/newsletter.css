@@ -1,0 +1,410 @@
+/* ── Base / reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+
+  --color-ink: #1a1a1a;
+  --color-muted: #555;
+  --color-bg: #fff;
+
+  /* brand colors pulled from the Cyber Crusaders logo */
+  --color-green: #1a6b1a;
+  --color-gold: #e8b800;
+  --color-green-dark: #134d13;
+
+  --color-accent: var(--color-green);
+  --color-rule: var(--color-green-dark);
+
+  --page-width: 680px;
+  --page-padding: 2rem;
+}
+
+body {
+  background: #e8e8e8;
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ── Page shell ── */
+.newsletter-page {
+  background: var(--color-bg);
+  max-width: var(--page-width);
+  margin: 2rem auto;
+  padding: var(--page-padding);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+}
+
+/* ── Header ── */
+.newsletter-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-logo-row {
+  margin-bottom: 0.75rem;
+}
+
+.header-logo {
+  height: 120px;
+  width: auto;
+}
+
+.header-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  /* gold matches the logo's "Cyber Crusaders" lettering */
+  color: var(--color-gold);
+  text-shadow: 1px 1px 0 var(--color-green-dark);
+}
+
+.header-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.header-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.header-rule {
+  border: none;
+  border-top: 4px solid var(--color-green);
+  margin-top: 1rem;
+  /* gold inner line gives a double-rule effect matching the logo's gold outline */
+  box-shadow: 0 2px 0 var(--color-gold);
+  padding-bottom: 2px;
+}
+
+/* ── Body ── */
+.newsletter-body {
+  margin-top: 1.5rem;
+}
+
+/* ── News section ── */
+.news-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-left: 4px solid var(--color-gold);
+  padding-left: 0.6rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  color: var(--color-green-dark);
+}
+
+.section-content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.section-bullets {
+  list-style: disc;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.section-bullets li {
+  margin-bottom: 0.25rem;
+}
+
+/* image grid — 1, 2, or 3 images side by side */
+.section-images {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.section-images--1 { grid-template-columns: 1fr; }
+.section-images--2 { grid-template-columns: 1fr 1fr; }
+.section-images--3 { grid-template-columns: 1fr 1fr 1fr; }
+
+.section-figure {
+  margin: 0;
+}
+
+.section-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* single image doesn't need a fixed height — let it flow naturally */
+.section-images--1 .section-image {
+  height: auto;
+  max-height: 360px;
+}
+
+.section-caption {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* ── Footer ── */
+.newsletter-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-rule {
+  border: none;
+  border-top: 4px solid var(--color-green);
+  box-shadow: 0 2px 0 var(--color-gold);
+  padding-bottom: 2px;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border: 1.5px solid var(--color-green);
+  border-radius: 2px;
+  color: var(--color-green-dark);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, color 0.15s;
+}
+
+.footer-link:hover {
+  background: var(--color-green);
+  color: var(--color-gold);
+}
+
+.footer-link-icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.footer-link-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-text {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+
+.footer-body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-left {
+  flex: 1;
+  text-align: left;
+}
+
+/* QR code column */
+.footer-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.footer-qr-link {
+  display: block;
+  padding: 6px;
+  border: 2px solid var(--color-green);
+  line-height: 0;
+  transition: border-color 0.15s;
+}
+
+.footer-qr-link:hover {
+  border-color: var(--color-gold);
+}
+
+.footer-qr-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+/* ── Print button (screen only) ── */
+.print-button {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  opacity: 0.85;
+}
+
+/* ── Print styles ── */
+@media print {
+  /*
+   * margin: 0 eliminates the @page margin band entirely — that band is where
+   * browsers inject their URL, date, and page-number chrome. No band = no chrome.
+   *
+   * Left/right content margins come from .newsletter-page padding (padding on a
+   * container repeats left/right across pages since the container spans the full
+   * document width). Top/bottom padding only lands on the first and last page,
+   * so per-section margin-top handles breathing room when sections start a new page.
+   */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: white;
+    font-size: 11pt;
+  }
+
+  .print-button {
+    display: none;
+  }
+
+  .newsletter-page {
+    max-width: 100%;
+    margin: 0;
+    padding: 15mm 20mm 12mm; /* top/sides/bottom — sides repeat on every page */
+    box-shadow: none;
+  }
+
+  .header-title {
+    font-size: 2.2rem;
+    color: var(--color-gold);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .header-logo {
+    height: 90px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .section-title {
+    color: var(--color-green-dark);
+    border-left-color: var(--color-gold);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .header-rule,
+  .footer-rule {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .news-section {
+    margin-top: 10mm;
+  }
+
+  /* first section sits directly under the header rule — no extra gap needed */
+  .news-section:first-child {
+    margin-top: 0;
+  }
+
+  .section-image {
+    max-height: 60mm;
+    object-fit: cover;
+  }
+
+  .section-images--1 .section-image {
+    max-height: 80mm;
+    height: auto;
+  }
+
+  .section-images {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer-link {
+    border-color: var(--color-green);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* append the URL in print so readers can find the pages */
+  .footer-link::after {
+    content: " · " attr(href);
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--color-muted);
+    letter-spacing: 0;
+  }
+
+  .footer-qr-link {
+    border-color: var(--color-green);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
