@@ -5,6 +5,7 @@ import NewsSection from '../../components/NewsSection';
 import NewsletterFooter from '../../components/NewsletterFooter';
 import PrintButton from '../../components/PrintButton';
 import ExportButton from '../../components/ExportButton';
+import SponsorsSection from '../../components/SponsorsSection';
 
 export function generateStaticParams() {
   return newsletters.map((n) => ({ slug: n.slug }));
@@ -36,6 +37,7 @@ export default async function NewsletterPage({ params }) {
           />
         ))}
       </main>
+      <SponsorsSection />
       <NewsletterFooter
         text={newsletter.footer}
         links={newsletter.links}
