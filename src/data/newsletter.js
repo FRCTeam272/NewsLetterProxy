@@ -37,7 +37,7 @@ export const newsletters = [{
       id: 2,
       title: "Week 1: Hatboro Horsham District Event",
       content:
-        "Our first competition was Week One at Hatboro Horsham High School. We were excited to be the Captains of the 2nd Alliance and were happy with our performance. We were also very excited to win the Impact Award which is the highest award given out in FIRST Robotics. This also meant that we qualified to compete at District Championships at Lehigh University.",
+        "Our first competition was Week One at Hatboro Horsham High School. We were excited to be the Captains of the 2nd Alliance and were happy with our performance. We were also very excited to win the Impact Award which is the most prestigious award given out in FIRST Robotics. This also meant that we qualified to compete at District Championships at Lehigh University.",
       bullets: [
         {
           text: "Check out our award winning impact video",
