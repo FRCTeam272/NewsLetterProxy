@@ -104,6 +104,27 @@ export const newsletters = [{
    ],
   },
   {
+   id: 6,
+   type: "seniors",
+   title: "Congratulations to Our 2026 Seniors!",
+   content:
+    "We are incredibly proud of our graduating seniors who have given so much to Team 272. Their dedication, leadership, and hard work have shaped this team and will continue to inspire future Cyber Crusaders for years to come.",
+   seniors: [
+    { name: "Ella Huber", image: "/images/studnets/2026.Ella Huber.jpg", note: "Salutatorian" },
+    { name: "JiHong Lee", image: "/images/studnets/2026.JiHong Lee.jpg" },
+    { name: "Nina Myers", image: "/images/studnets/2026.Nina Myers.jpg" },
+    { name: "Ryan Schiedt", image: "/images/studnets/2026.Ryan Schiedt.jpg" },
+   ],
+   quote: {
+    paragraphs: [
+     "Being a part of a team is where many of us faced pressure and failure at LC, and for me that was as a member of the robotics team. Robotics isn't an athletic team, but make no mistake: it is highly competitive. It demands creativity, teamwork, resilience, communication, and countless hours of hard work. There were long nights, difficult problems, failed designs, and moments where success felt entirely impossible. Failure looked like eight years of trying before we finally qualified for the Robotics World Championship. There were countless setbacks, disappointing losses, and moments when giving up would have been easier. But every failure taught me something: how to adapt, how to improve, and how to keep going when success felt far away.",
+     "Robotics taught me something much bigger than engineering, and I want to share that with you all here today. It taught me that everything is \"figureoutable.\" You can always find a way, or make one. And right now, you don't need to have your entire future planned out. You just need something you genuinely love doing, surrounded by people who push you to become better, and the courage to take the next step.",
+     "Finally, I would like to thank LC Robotics, Team 272, the Cyber Crusaders, including our current team members, alumni, and our incredible mentors, for being the single most impactful part of my high school career.",
+    ],
+    attribution: "— Ella Huber, Salutatorian, Class of 2026",
+   },
+  },
+  {
    id: 10,
    title: "\"More than Robots\": Community Outreach & Demos",
    content:
