@@ -6,7 +6,11 @@
       "Bash(find /home/jakeg/source/repo/CrusaderNewsletter/public -type f 2>/dev/null; find /tmp -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.svg\" 2>/dev/null | head -10)",
       "Read(//tmp/**)",
       "Bash(npm install *)",
-      "Bash(rm /home/jakeg/source/repo/CrusaderNewsletter/src/hooks/usePageBreaks.js)"
+      "Bash(rm /home/jakeg/source/repo/CrusaderNewsletter/src/hooks/usePageBreaks.js)",
+      "Bash(xargs ls -la)",
+      "Bash(curl -s http://localhost:3099/2026)",
+      "Bash(chromium-cli screenshot *)",
+      "Bash(chromium --headless --disable-gpu --screenshot=/tmp/newsletter-full.png --window-size=800,3000 http://localhost:3099/2026)"
     ],
     "additionalDirectories": [
       "/home/jakeg/source/repo/CrusaderNewsletter/src/hooks"
