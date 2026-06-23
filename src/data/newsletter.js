@@ -61,7 +61,7 @@ export const newsletters = [{
    id: 3,
    title: "Week 3: Centennial District Event",
    content:
-    "Our second competition of the season was Week Three, FMA District Centennial Event, help at William Tennet High School. We finished in 4th place and were picked to be part of the 2nd Alliance. We went on to play in the finals securing a second place finish. We won the Industrial Design Award, that celebrates the FRC team whose machine successfully strikes a balance between form, function, and aesthetics.",
+    "Our second competition of the season was Week Three, FMA District Centennial Event, held at William Tennet High School. We finished in 4th place and were picked to be part of the 2nd Alliance. We went on to play in the finals securing a second place finish. We won the Industrial Design Award, that celebrates the FRC team whose machine successfully strikes a balance between form, function, and aesthetics.",
    bullets: [],
    images: [
     {
@@ -88,7 +88,7 @@ export const newsletters = [{
    id: 5,
    title: "FIRST Robotics World Championship in Houston Texas",
    content:
-    "With a huge outpouring of financial support from friends, family and alumni, we competed in the FIRST Championship which was held in Houston, Texas. It has been eight years since we last qualified for the FIRST Championship. This was an amazing experience for the team, students and mentors. It was held at the James R. Brown Convention Center with 597 teams from around the globe. We competed on the Daly Field against 75 teams from around the world. We finished qualifying matches ranked 18th, which is the highest we ever finished at Championship.  We were picked by the 8th Alliance captained by FRC Team 1939 from Mexico and for the first time in our team history played in the playoffs. While we were eliminated early, we lost to the team who won the Championship.",
+    "With a huge outpouring of financial support from friends, family and alumni, we competed in the FIRST Championship which was held in Houston, Texas. It has been eight years since we last qualified for the FIRST Championship. This was an amazing experience for the team, students and mentors. It was held at the George R. Brown Convention Center with 597 teams from around the globe. We competed on the Daly Field against 75 teams from around the world. We finished qualifying matches ranked 18th, which is the highest we ever finished at Championship.  We were picked by the 8th Alliance captained by FRC Team 1939 from Mexico and for the first time in our team history played in the playoffs. While we were eliminated early, we lost to the team who won the Championship.",
    bullets: [],
    images: [
     {
