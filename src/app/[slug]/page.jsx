@@ -4,8 +4,7 @@ import NewsletterHeader from '../../components/NewsletterHeader';
 import NewsSection from '../../components/NewsSection';
 import SeniorsSection from '../../components/SeniorsSection';
 import NewsletterFooter from '../../components/NewsletterFooter';
-import PrintButton from '../../components/PrintButton';
-import ExportButton from '../../components/ExportButton';
+import ExportControls from '../../components/ExportControls';
 import SponsorsSection from '../../components/SponsorsSection';
 
 export function generateStaticParams() {
@@ -19,8 +18,7 @@ export default async function NewsletterPage({ params }) {
 
   return (
     <div className="newsletter-page">
-      <PrintButton />
-      <ExportButton slug={slug} />
+      <ExportControls slug={slug} />
       <NewsletterHeader
         title={newsletter.title}
         tagline={newsletter.tagline}

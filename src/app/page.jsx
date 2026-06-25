@@ -11,6 +11,10 @@ export default function Home() {
             <Link href={`/${n.slug}`}>
               {n.title} — {n.date}
             </Link>
+            {' '}
+            <Link href={`/${n.slug}?export=true`}>
+              (export)
+            </Link>
           </li>
         ))}
       </ul>
