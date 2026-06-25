@@ -159,13 +159,14 @@ body {
 
 .section-image {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
 
-/* single image doesn't need a fixed height — let it flow naturally */
+/* single image preserves its natural ratio */
 .section-images--1 .section-image {
+  aspect-ratio: unset;
   height: auto;
   max-height: 360px;
 }
@@ -446,6 +447,48 @@ body {
 
 .print-button:hover {
   opacity: 0.85;
+}
+
+/* ── Responsive / iframe-friendly ── */
+@media (max-width: 720px) {
+  :root {
+    --page-width: 100%;
+    --page-padding: 1rem;
+  }
+
+  .newsletter-page {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-images--2,
+  .section-images--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .seniors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
 }
 
 /* ── Print styles ── */
